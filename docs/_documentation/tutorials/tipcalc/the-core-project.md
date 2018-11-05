@@ -248,7 +248,7 @@ With our `CalculationService` and our `TipViewModel` defined, we now just need t
 Our "Tip Calculation" App class will register the `ICalculationService` as a dynamic service:
 
 ```c#
-Mvx.RegisterType<ICalculationService, CalculationService>();
+Mvx.IoCProvider.RegisterType<ICalculationService, CalculationService>();
 ```
 
 The previous line tells the IoC Container that whenever any code requests an `ICalculationService` reference, an object of type `CalculationService` should be created and returned.
